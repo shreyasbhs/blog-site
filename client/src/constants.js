@@ -1,4 +1,4 @@
 module.exports = {
 
-    SITE_TITLE: "DCT test site"
+    SITE_TITLE: "mPulse QA"
 }

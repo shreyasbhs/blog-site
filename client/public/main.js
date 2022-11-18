@@ -48,7 +48,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**************************/
 /***/ ((module) => {
 
-eval("module.exports = {\n  SITE_TITLE: \"DCT test site\"\n};\n\n//# sourceURL=webpack://client/./src/constants.js?");
+eval("module.exports = {\n  SITE_TITLE: \"mPulse QA\"\n};\n\n//# sourceURL=webpack://client/./src/constants.js?");
 
 /***/ }),
 
