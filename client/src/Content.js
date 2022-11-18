@@ -12,7 +12,7 @@ const Content = (props) =>{
 
 Boomerang measures the performance characteristics of real-world page loads and interactions.
 
-The documentation here is for mPulse's Boomerang. <a hre = "https://akamai.github.io/boomerang/akamai/">General API documentation for Boomerang.</a>
+The documentation here is for mPulse's Boomerang. <a href = "https://akamai.github.io/boomerang/akamai/">General API documentation for Boomerang.</a>
         </p>
         </div>
     )
