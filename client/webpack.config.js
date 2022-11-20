@@ -7,16 +7,18 @@ module.exports = {
    entry: "./index.js",
    output: {
        path: path.resolve(__dirname,"public"),
-       filename: "main.js"
+       filename: "main.js",
+       publicPath: '/'
 
    },
    target: "web",
    devServer: {
-       port: 80,
+       port: 8080,
        static: ["./public"],
        open: true,
        hot: true,
-       liveReload:true
+       liveReload:true,
+       historyApiFallback: true,
 
    },
    resolve: {
@@ -45,6 +47,17 @@ module.exports = {
                   
                     ] 
         },
+        {
+            test: /\.(png|jpg)$/, 
+            use: [
+                {
+                  loader: 'url-loader',
+                  options: {
+                    limit: 8192,
+                  },
+                },
+              ],
+        }
 
     ]
 }

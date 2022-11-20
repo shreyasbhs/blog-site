@@ -3,9 +3,11 @@ import React from 'react';
 
 const Heading = (props)=>{
     return (
+      <div class = "header-content"> 
         <h1>
-          Welcome to {props.title}
+          {props.title}
         </h1>
+        </div>
     )
 }
 

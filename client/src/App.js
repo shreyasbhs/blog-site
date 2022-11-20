@@ -1,25 +1,21 @@
 import React from 'react';
-import { SITE_TITLE } from './constants';'./constants';
-import Heading from './Heading'
-import Content from './Content';
-import './App.css';
-// const Heading = (props)=>{
-//     return (
-//         <h1>
-//           Welcome to {props.title}
-//         </h1>
-//     )
-// }
+import { BrowserRouter as Router,Route, Routes }  from 'react-router-dom';
+import Landing from './Landing';
+import Home from './Home';
 const App = () =>{
-
+  
     return (
-      <div>
-      <div className = "header-wrapper">
-         <Heading title = {SITE_TITLE}/>    
-       </div>
-       <Content title = "mPulse Boomerang" />
-       </div>
-
+       <Router>
+       <Routes >
+        <Route exact path = '/' element = { <Landing />} />
+        
+       
+        <Route path = '/home' element = {<Home />} />
+        
+   
+       </Routes>
+      </Router>
+  
     );
 }
 export default App;
