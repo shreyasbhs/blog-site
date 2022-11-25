@@ -20,7 +20,7 @@ pipeline {
                 dir("${env.WORKSPACE}/client"){
                 sh("npm install")
                 sh("npm run build")
-                sh("screen -d -m -S screen.npmStart npm start")
+                sh("nohup npm start")
                 }
             }
          }
