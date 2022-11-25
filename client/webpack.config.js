@@ -19,6 +19,7 @@ module.exports = {
        hot: true,
        liveReload:true,
        historyApiFallback: true,
+       allowedHos: 'all',
 
    },
    resolve: {
