@@ -20,7 +20,7 @@ pipeline {
                 dir("${env.WORKSPACE}/client"){
                 sh("npm install")
                 sh("npm run build")
-                sh("npm start")
+                sh("(npm run start&)")
                 }
             }
          }
