@@ -20,7 +20,7 @@ pipeline {
                 dir("${env.WORKSPACE}/client"){
                 sh("npm install")
                 sh("npm run build")
-                sh("nohup npm start")
+                sh('tmux new-session -d -s "client start" "npm start"')
                 }
             }
          }
