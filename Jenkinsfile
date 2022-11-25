@@ -9,17 +9,19 @@ pipeline {
          }
          stage('Run server'){
              steps{
-              dir("${env.WORKSPACE/server}")
+              dir("${env.WORKSPACE/server}"){
               sh("npm install")
               sh("node serverAPI.js")
+              }
              }
          }
          stage('Run client'){
             steps{
-                dir("${env.WORKSPACE/client}")
+                dir("${env.WORKSPACE/client}"){
                 sh("npm install")
                 sh("npm run build")
                 sh("npm start")
+                }
             }
          }
      }
