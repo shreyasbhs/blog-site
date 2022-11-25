@@ -7,14 +7,15 @@ pipeline {
                  sh("sudo yum install nodejs")
              }
          }
-        //  stage('Run server'){
-        //      steps{
-        //       dir("${env.WORKSPACE}/server"){
-        //       sh("npm install")
-        //       sh("node serverAPI.js")
-        //       }
-        //      }
-        //  }
+         
+         stage('Run server'){
+             steps{
+              dir("${env.WORKSPACE}/server"){
+              sh("npm install")
+              sh('tmux new-session -d -s "server start" "node serverAPI.js"')
+              }
+             }
+         }
          stage('Run client'){
             steps{
                 dir("${env.WORKSPACE}/client"){
