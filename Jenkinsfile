@@ -3,19 +3,19 @@ pipeline {
 
      stages{
          stage("Install node"){
-             step{
+             steps{
                  sh("sudo apt install node")
              }
          }
          stage('Run server'){
-             step{
+             steps{
               dir("${env.WORKSPACE/server}")
               sh("npm install")
               sh("node serverAPI.js")
              }
          }
          stage('Run client'){
-            step{
+            steps{
                 dir("${env.WORKSPACE/client}")
                 sh("npm install")
                 sh("npm run build")
