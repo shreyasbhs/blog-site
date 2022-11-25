@@ -4,7 +4,7 @@ pipeline {
      stages{
          stage("Install node"){
              steps{
-                 sh("sudo apt install node")
+                 sh("sudo yum install node")
              }
          }
          stage('Run server'){
