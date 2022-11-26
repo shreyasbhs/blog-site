@@ -1,7 +1,18 @@
 pipeline {
     agent { label 'blog'}
     git branch: 'main', credentialsId: 'shres', url: 'git@github.com:shreyasbhs/mpulse_test_site.git'
+
      stages{
+        stage("Explicit checkout"){
+            steps{
+                
+            git branch: 'main', 
+            credentialsId: 'shres',
+            url: 'git@github.com:shreyasbhs/mpulse_test_site.git'
+            sh("ls -lat")
+        
+            }
+        }
         stage("Initial build test"){
             steps{
                 sh("echo Jenkins job build successfully!!!")
