@@ -1,7 +1,7 @@
 pipeline {
 
     agent { label 'blog'}
-       agent any
+    //    agent any
     //  options {
           
     //         skipDefaultCheckout(true)
