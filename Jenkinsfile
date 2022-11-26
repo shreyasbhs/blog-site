@@ -7,7 +7,9 @@ pipeline {
     //     }
      stages{
        stage("build client"){
+           step{
            sh("source build.sh")
+           }
        }
      }
     
