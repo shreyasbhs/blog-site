@@ -1,10 +1,10 @@
 pipeline {
     agent { label 'blog'}
    
-     options {
+    //  options {
           
-            skipDefaultCheckout()
-        }
+    //         skipDefaultCheckout()
+    //     }
      stages{
         // stage("Explicit checkout"){
         //     steps{
