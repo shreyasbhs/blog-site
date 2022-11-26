@@ -4,7 +4,7 @@ pipeline {
      stages{
        stage("build client"){
            steps{
-        //    sh("chmod 777 build")
+           sh("chmod 777 build.sh")
         //    sh("")
 
 
