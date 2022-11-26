@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'blog'}
+    agent { label 'blog-node'}
     //    agent any
      stages{
        stage("build client"){
