@@ -24,7 +24,7 @@ pipeline {
         }
         stage("make a new directory"){
             steps{
-                sh("cd /home/jenkins")
+                // sh("cd /home/jenkins")
                 sh("mkdir test")
             }
         }
