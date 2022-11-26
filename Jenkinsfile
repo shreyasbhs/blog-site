@@ -6,6 +6,8 @@ pipeline {
            steps{
         //    sh("chmod 777 build")
         //    sh("./build")
+
+        
           sh('''
           #!/bin/bash
             docker rm blog-app
