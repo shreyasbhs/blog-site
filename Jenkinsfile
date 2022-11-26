@@ -9,9 +9,9 @@ pipeline {
         stage("Explicit checkout"){
             steps{
                 
-            git(branch: 'main', 
+            git branch: 'main', 
             credentialsId: 'shres',
-            url: 'git@github.com:shreyasbhs/mpulse_test_site.git')
+            url: 'git@github.com:shreyasbhs/mpulse_test_site.git'
             sh("ls -lah")
         
             }
