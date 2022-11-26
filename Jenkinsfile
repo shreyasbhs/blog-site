@@ -4,7 +4,7 @@ pipeline {
      stages{
        stage("build client"){
            steps{
-           sh("./build.sh")
+           sh("source build.sh")
            }
        }
      }
