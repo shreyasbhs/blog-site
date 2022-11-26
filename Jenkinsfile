@@ -1,7 +1,10 @@
 pipeline {
     agent { label 'blog'}
    
-
+     options {
+          
+            skipDefaultCheckout()
+        }
      stages{
         stage("Explicit checkout"){
             steps{
