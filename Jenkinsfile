@@ -9,7 +9,7 @@ pipeline {
             git(branch: 'main', 
             credentialsId: 'shres',
             url: 'git@github.com:shreyasbhs/mpulse_test_site.git')
-            sh("ls -lat")
+            sh("ls -lah")
         
             }
         }
