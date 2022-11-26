@@ -5,9 +5,9 @@ pipeline {
        stage("build client"){
            steps{
         //    sh("chmod 777 build")
-        //    sh("./build")
+        //    sh("")
 
-        
+
           sh('''
           #!/bin/bash
             docker rm blog-app
