@@ -1,6 +1,6 @@
 pipeline {
     agent { label 'blog'}
-    git branch: 'main', credentialsId: 'shres', url: 'git@github.com:shreyasbhs/mpulse_test_site.git'
+   
 
      stages{
         stage("Explicit checkout"){
