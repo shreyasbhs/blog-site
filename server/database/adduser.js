@@ -2,13 +2,14 @@
 const { Client } = require('pg');
 const  {SQL_USER, SQL_PASSWORD, SQL_HOST, SQL_PORT, SQL_DB} = require('./config.js');
 const { insertInto } = require("./utils");
-
-const addNewUser = (userInfo,res) => { 
+const {hashPassword} = require('../managePassword')
+async function addNewUser(userInfo,res){ 
     let mSqlclient = new Client(`postgres://${SQL_USER}:${SQL_PASSWORD}@${SQL_HOST}:${SQL_PORT}/${SQL_DB}`);
     mSqlclient.connect();
     let columns = ["username","email","passwd","userstatus"];
     let values = [];
     let dbRes = {}
+    userInfo["password"] = await hashPassword(userInfo["password"])
     values.push(`'${userInfo["username"]}'`);
     values.push(`'${userInfo["email"]}'`);
     values.push(`'${userInfo["password"]}'`);

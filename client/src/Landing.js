@@ -64,7 +64,7 @@ const SignUp = (props) =>{
   
    return (
      <div className = "signup-wrapper">
-    
+        
        <form  onSubmit = {submitSignUForm}>
            {/* <label htmlFor="username">username</label> */}
            <h2> {title} </h2>
@@ -82,6 +82,47 @@ const SignUp = (props) =>{
    );
 
 } 
+const SignIn = () => {
+  const title = "Sign In";
+  const submitSignInForm = (e)=>{
+
+           e.preventDefault();
+           const form = e.target;
+           console.log(form);
+           const formData = new URLSearchParams();
+           for (const pair of new FormData(form)) {
+              formData.append(pair[0], pair[1]);
+            }
+           const url = "http://localhost:5000/signinUser";
+           fetch(url,{
+            method: 'POST',
+           
+            body:formData
+        }).then(res => {
+          console.log(res);
+        })
+            
+
+
+  }
+  return(
+    <div className = "signup-wrapper">
+    
+       <form  onSubmit = {submitSignInForm}>
+         
+           <h2> {title} </h2>
+           <input type = "text" name = "username"  placeholder = "username" autoComplete = "off" autoFocus = "autofocus" required/>
+           
+           <br/>
+         
+           <input type = "password" name = "password" placeholder = "password" required/><br/>
+      
+           <input type = "submit" className = "submit-button" id = "signup-submit-button" value = "Sign In"/>
+       </form>
+        <p class="register-link"> Not a User, Register <a href="/signup">here</a> </p>
+     </div>
+  )
+}
 const Landing = () => {
     return (  
         <div className= "landing-page-wrapper">
@@ -89,7 +130,7 @@ const Landing = () => {
          <Heading title = {SITE_TITLE}/>    
        </div>
          <Aklogo />
-         <SignUp />
+         <SignIn />
        
        </div>
     );

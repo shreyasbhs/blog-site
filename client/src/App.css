@@ -132,3 +132,12 @@ input{
        
     
 }
+.register-link{
+    position: relative;
+    width:40%;
+    left:30%;
+}
+.register-link a{
+    color:white;
+    font-weight:bold;
+}
